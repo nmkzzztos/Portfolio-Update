@@ -1,6 +1,7 @@
 "use strict";
 
-var skill = document.getElementById("skills");
+var design = document.getElementById("design");
+var frontend = document.getElementById("frontend");
 var avatar = document.getElementById("avatar-btn");
 var works = document.getElementById("works");
 var logo = document.getElementById("logo");
@@ -23,19 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var scrolling = window.scrollY;
     console.log(isMobile);
 
-    if (scrolling > 250) {
+    if (scrolling > 200) {
       avatar.classList.add("avatar-btn-active");
     } else {
       avatar.classList.remove("avatar-btn-active");
     }
 
-    if (scrolling > 850) {
-      skill.classList.add("skills-active");
+    if (scrolling > 750) {
+      design.classList.add("design-active");
+      frontend.classList.add("frontend-active");
     } else {
-      skill.classList.remove("skills-active");
+      design.classList.remove("design-active");
+      frontend.classList.remove("frontend-active");
     }
 
-    if (scrolling > 1500) {
+    if (scrolling > 1400) {
       works.classList.add("works-active");
     } else {
       works.classList.remove("works-active");
