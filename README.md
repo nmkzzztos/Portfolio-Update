@@ -5,6 +5,6 @@
 
 
 ## Stack
-- HTML
-- CSS
-- vanilla JS
+- [HTML](https://html.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [vanilla JS](https://www.javascript.com/)
