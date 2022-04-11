@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     let scrolling = window.scrollY;
 
-    console.log(availableScreenHeight + " max height");
-    console.log(worksItem[1].getBoundingClientRect().bottom + " bottom");
-    console.log(worksItem[1].getBoundingClientRect().top + " top");
-    console.log(availableScreenHeight / 2 - 125);
+    // console.log(isMobile);
 
     if (scrolling > 200) {
       avatar.classList.add("avatar-btn-active");
@@ -49,46 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
       frontend.classList.remove("frontend-active");
     }
 
-    if (scrolling > 1400) {
+    if (scrolling > 1350) {
       works.classList.add("works-active");
     } else {
       works.classList.remove("works-active");
     }
-    
-        if (
-      worksItem[0].getBoundingClientRect().top >
-        availableScreenHeight / 2 - 125 &&
-      worksItem[0].getBoundingClientRect().top <
-        availableScreenHeight / 2 + 125 &&
-      isMobile
-    ) {
-      document.getElementsByClassName("works__item-link")[0].style.opacity =
-        "1";
-      document.getElementsByClassName("works__item-img")[0].style.opacity =
-        "0.2";
-      document.getElementsByClassName("works__item-img")[0].style.transform =
-        "scale(1,1)";
-    } else {
-      document.getElementsByClassName("works__item-link")[0].style.opacity =
-        "0";
-      document.getElementsByClassName("works__item-img")[0].style.opacity = "1";
+
+    console.log(window.screen.width < 750);
+
+    if (window.screen.width < 750 && isMobile) {
+      if (
+        worksItem[0].getBoundingClientRect().top >
+          availableScreenHeight / 2 - 250 &&
+        worksItem[0].getBoundingClientRect().top < availableScreenHeight / 2
+      ) {
+        document.getElementsByClassName("works__item-link")[0].style.opacity =
+          "1";
+        document.getElementsByClassName("works__item-img")[0].style.opacity =
+          "0.2";
+        document.getElementsByClassName("works__item-img")[0].style.transform =
+          "scale(1,1)";
+      } else {
+        document.getElementsByClassName("works__item-link")[0].style.opacity =
+          "0";
+        document.getElementsByClassName("works__item-img")[0].style.opacity =
+          "1";
+      }
     }
 
-    if (
-      worksItem[1].getBoundingClientRect().top >
-        availableScreenHeight / 2 - 125 &&
-      worksItem[1].getBoundingClientRect().top <
-        availableScreenHeight / 2 + 125 &&
-      isMobile
-    ) {
-      document.getElementsByClassName("works__item-link")[1].style.opacity =
-        "1";
-      document.getElementsByClassName("works__item-img")[1].style.opacity =
-        "0.2";
-    } else {
-      document.getElementsByClassName("works__item-link")[1].style.opacity =
-        "0";
-      document.getElementsByClassName("works__item-img")[1].style.opacity = "1";
+    if (window.screen.width < 750 && isMobile) {
+      if (
+        worksItem[1].getBoundingClientRect().top >
+          availableScreenHeight / 2 - 250 &&
+        worksItem[1].getBoundingClientRect().top < availableScreenHeight / 2
+      ) {
+        document.getElementsByClassName("works__item-link")[1].style.opacity =
+          "1";
+        document.getElementsByClassName("works__item-img")[1].style.opacity =
+          "0.2";
+      } else {
+        document.getElementsByClassName("works__item-link")[1].style.opacity =
+          "0";
+        document.getElementsByClassName("works__item-img")[1].style.opacity =
+          "1";
+      }
     }
   });
 });
