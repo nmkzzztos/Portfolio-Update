@@ -30,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     let scrolling = window.scrollY;
 
-    // console.log(isMobile);
-
     if (scrolling > 200) {
       avatar.classList.add("avatar-btn-active");
     } else {
@@ -51,8 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       works.classList.remove("works-active");
     }
-
-    console.log(window.screen.width < 750);
 
     if (window.screen.width < 750 && isMobile) {
       if (
