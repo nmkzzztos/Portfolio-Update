@@ -28,7 +28,6 @@ main {
   transition-timing-function: ease-out;
   animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
-
   z-index: 1100;
 }
 
@@ -37,7 +36,7 @@ main {
   width: 20px;
   height: 20px;
   position: absolute;
-  border: 8px solid #3f74ff;
+  border: 8px solid #8cf7ff;
   border-radius: 50%;
   opacity: 0.5;
   top: -8px;
@@ -88,7 +87,7 @@ main {
 
 .expand {
   animation: cursorAnim3 0.5s forwards;
-  border: 1px solid #3d339b;
+  border: 1px solid #00158f;
 }
 
 .container {
