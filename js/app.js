@@ -87,6 +87,26 @@ document.addEventListener("DOMContentLoaded", () => {
           "1";
       }
     }
+
+    if (window.screen.width < 750 && isMobile) {
+      if (
+        worksItem[2].getBoundingClientRect().top >
+          availableScreenHeight / 2 - 250 &&
+        worksItem[2].getBoundingClientRect().top < availableScreenHeight / 2
+      ) {
+        document.getElementsByClassName("works__item-link")[2].style.opacity =
+          "1";
+        document.getElementsByClassName("works__item-img")[2].style.opacity =
+          "0.2";
+        document.getElementsByClassName("works__item-img")[2].style.transform =
+          "scale(1,1)";
+      } else {
+        document.getElementsByClassName("works__item-link")[2].style.opacity =
+          "0";
+        document.getElementsByClassName("works__item-img")[2].style.opacity =
+          "1";
+      }
+    }
   });
 });
 
