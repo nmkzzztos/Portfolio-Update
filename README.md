@@ -6,6 +6,6 @@ This is my portfolio which contains some information about me and my pet-project
 
 
 ## Stack
-- [HTML](https://html.com/)
+- [HTML](https://reactjs.org/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [vanilla JS](https://www.javascript.com/)
