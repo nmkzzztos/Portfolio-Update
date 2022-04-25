@@ -107,6 +107,26 @@ document.addEventListener("DOMContentLoaded", () => {
           "1";
       }
     }
+
+    if (window.screen.width < 750 && isMobile) {
+      if (
+        worksItem[3].getBoundingClientRect().top >
+          availableScreenHeight / 2 - 250 &&
+        worksItem[3].getBoundingClientRect().top < availableScreenHeight / 2
+      ) {
+        document.getElementsByClassName("works__item-link")[3].style.opacity =
+          "1";
+        document.getElementsByClassName("works__item-img")[3].style.opacity =
+          "0.2";
+        document.getElementsByClassName("works__item-img")[3].style.transform =
+          "scale(1,1)";
+      } else {
+        document.getElementsByClassName("works__item-link")[3].style.opacity =
+          "0";
+        document.getElementsByClassName("works__item-img")[3].style.opacity =
+          "1";
+      }
+    }
   });
 });
 
